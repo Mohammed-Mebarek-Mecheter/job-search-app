@@ -1,0 +1,7 @@
+# .gitignore
+
+config.py
+/env
+.ipynb
+/app
+update.py

@@ -1,0 +1,8 @@
+geocoder==1.38.1
+google_search_results==2.4.2
+pandas==2.0.3
+psycopg2==2.9.9
+pydeck==0.8.1b0
+schedule==1.2.1
+serpapi==0.1.5
+streamlit==1.31.1
