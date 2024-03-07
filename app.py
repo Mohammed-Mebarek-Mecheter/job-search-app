@@ -5,14 +5,15 @@ import psycopg2
 import pydeck as pdk
 import geocoder
 import base64
-
+import os
+from dotenv import load_dotenv
 
 # Set page title and layout
-st.set_page_config(page_title='Data Jobs in Qatar', layout='wide')
+st.set_page_config(page_title='Worldwide Data Jobs', layout='wide')
 
 # Display title and introduction
-st.title('Data-Related Jobs in Qatar')
-st.write('This app displays the latest data-related job postings in Qatar using SerpApi.')
+st.title('Worldwide Data Jobs')
+st.write('This app displays the latest worldwide data-related job postings using SerpApi.')
 
 # User input for job search
 search_query = st.sidebar.text_input('Enter a job title to search for', '')
@@ -24,12 +25,12 @@ job_titles = {"Business Analyst", "Research Analyst", "Market Research Analyst",
 
 if search_query:
     job_titles = {search_query}
-
+load_dotenv()
 params = {
     "engine": "google_jobs",
     "q": " | ".join(job_titles),
-    "location": "Qatar",
-    "api_key": "API_KEY"
+    "location": "",
+    "api_key": os.getenv("API_KEY")
 }
 
 search = GoogleSearch(params)
@@ -39,7 +40,7 @@ results = search.get_dict()
 jobs = results.get("jobs_results", [])
 
 if not jobs:
-    st.error('Search to find your Data Dream Job')
+    st.error('Search to find your Worldwide Data Dream Job')
 else:
     # Display job data in tabs
     with st.sidebar.expander("View Options"):
@@ -85,7 +86,7 @@ else:
         )
 
         # Set the initial view state
-        view_state = pdk.ViewState(latitude=25.2854, longitude=51.5310, zoom=7, bearing=0, pitch=0)
+        view_state = pdk.ViewState(latitude=95.7129, longitude=37.0902, zoom=3, bearing=0, pitch=0)
 
         # Create the Pydeck map
         map_ = pdk.Deck(
