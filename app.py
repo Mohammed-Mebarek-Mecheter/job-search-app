@@ -6,9 +6,7 @@ import pydeck as pdk
 import geocoder
 import base64
 import os
-
-# Import API key from config file
-from config import SERPAPI_API_KEY
+from dotenv import load_dotenv
 
 # Database connection
 conn = psycopg2.connect(database="job_db", user="postgres", password="mebarek", host="localhost")
@@ -31,7 +29,7 @@ job_titles = {"Business Analyst", "Research Analyst", "Market Research Analyst",
 
 if search_query:
     job_titles = {search_query}
-
+load_dotenv()
 params = {
     "engine": "google_jobs",
     "q": " | ".join(job_titles),
