@@ -8,6 +8,10 @@ import base64
 import os
 from dotenv import load_dotenv
 
+# Database connection
+conn = psycopg2.connect(database="job_db", user="postgres", password="mebarek", host="localhost")
+cursor = conn.cursor()
+
 # Set page title and layout
 st.set_page_config(page_title='Data Jobs in Qatar', layout='wide')
 
@@ -30,7 +34,7 @@ params = {
     "engine": "google_jobs",
     "q": " | ".join(job_titles),
     "location": "Qatar",
-    "api_key": "API_KEY"
+    "api_key": os.getenv("API_KEY")
 }
 
 search = GoogleSearch(params)
