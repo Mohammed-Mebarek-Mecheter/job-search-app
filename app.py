@@ -5,8 +5,7 @@ import psycopg2
 import pydeck as pdk
 import geocoder
 import base64
-import os
-from dotenv import load_dotenv
+
 
 # Set page title and layout
 st.set_page_config(page_title='Worldwide Data Jobs', layout='wide')
@@ -29,8 +28,8 @@ load_dotenv()
 params = {
     "engine": "google_jobs",
     "q": " | ".join(job_titles),
-    "location": "",
-    "api_key": os.getenv("API_KEY")
+    "location": "Qatar",
+    "api_key": "API_KEY"
 }
 
 search = GoogleSearch(params)
