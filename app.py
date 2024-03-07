@@ -8,10 +8,6 @@ import base64
 import os
 from dotenv import load_dotenv
 
-# Database connection
-conn = psycopg2.connect(database="job_db", user="postgres", password="mebarek", host="localhost")
-cursor = conn.cursor()
-
 # Set page title and layout
 st.set_page_config(page_title='Data Jobs in Qatar', layout='wide')
 
