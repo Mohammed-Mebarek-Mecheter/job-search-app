@@ -18,6 +18,9 @@ st.write('This app displays the latest worldwide data-related job postings using
 # User input for job search
 search_query = st.sidebar.text_input('Enter a job title to search for', '')
 
+# User input for location search
+location_query = st.sidebar.text_input('Enter a location to search for jobs', '')
+
 job_titles = {"Business Analyst", "Research Analyst", "Market Research Analyst",
               "Marketing Analyst", "Data Analyst", "Quantitative Analyst",
               "Data Specialist", "Analytics Consultant", "Business Intelligence Analyst",
@@ -29,7 +32,7 @@ load_dotenv()
 params = {
     "engine": "google_jobs",
     "q": " | ".join(job_titles),
-    "location": "",
+    "location": location_query,
     "api_key": os.getenv("API_KEY")
 }
 
