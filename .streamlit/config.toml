@@ -1,6 +1,6 @@
 [theme]
-primaryColor="#ffffff" # Blue color (for primary elements, buttons, etc.)
-backgroundColor="#0077b6" # White color (for the main background)
-secondaryBackgroundColor="#f0f0f0" # Light gray color (for secondary backgrounds, containers, etc.)
-textColor="#333333" # Dark gray color (for text)
+primaryColor="#af0000"
+backgroundColor="#000000"
+secondaryBackgroundColor="#363fb1"
+textColor="#ffffff"
 font="sans serif"

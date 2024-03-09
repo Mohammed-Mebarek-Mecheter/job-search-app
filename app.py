@@ -43,7 +43,8 @@ results = search.get_dict()
 jobs = results.get("jobs_results", [])
 
 if not jobs:
-    st.error('Search to find your Worldwide Data Dream Job')
+    st.error("For now, the job search is not available.")
+    st.error("Please come back after SerpApi renews my free plan.")
 else:
     # Display job data in tabs
     with st.sidebar.expander("View Options"):
