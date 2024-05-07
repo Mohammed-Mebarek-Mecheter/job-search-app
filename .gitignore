@@ -10,3 +10,5 @@ update.py
 # Database connection
 conn = psycopg2.connect(database="job_db", user="postgres", password="", host="localhost")
 cursor = conn.cursor()
+Pipfile
+Pipfile.lock
