@@ -1,7 +1,12 @@
-# .gitignore
+.gitignore
 
 config.py
 .env
 .ipynb
 /app
 update.py
+.idea
+
+# Database connection
+conn = psycopg2.connect(database="job_db", user="postgres", password="", host="localhost")
+cursor = conn.cursor()

@@ -2,16 +2,17 @@
 
 ## Overview
 
-The JobSearcher app is a Streamlit-based web application designed to help users search for job listings in Qatar. The app utilizes the Google Jobs API to fetch real-time job data based on user-defined search criteria.
+This Streamlit app displays the latest worldwide data-related job postings using the SerpApi to fetch real-time job data based on user-defined search criteria.
+
+![JobSearcher App](app.PNG)
 
 ## Features
 
-- Search for job listings by various job titles in Qatar.
-- Display detailed information about each job listing, including title, company, location, description, and more.
-- Filter job listings based on user preferences.
-- Download search results as CSV or Excel files.
-- Secure API key management to protect sensitive information.
-- Customizable theming options for user interface personalization.
+- Search for data-related jobs worldwide.
+- View job listings in a table format.
+- Download job listings as a CSV file.
+- View job listings on a map (if location data is available).
+- View job listings in JSON format.
 
 ## Installation
 
@@ -36,6 +37,7 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
+5. You can access the JobSearcher App [here](https://jobsearcher.streamlit.app/).
 
 ## Usage
 
@@ -43,7 +45,7 @@ streamlit run app.py
 - Enter desired job titles and search parameters, then click the "Search" button.
 - The app will fetch job listings from the Google Jobs API based on the provided criteria.
 - Users can view detailed information about each job listing and filter results as needed.
-- To download search results, click on the "Download CSV" or "Download Excel" button.
+- To download search results, click on the "Download CSV" button.
 
 ## Contributing
 
