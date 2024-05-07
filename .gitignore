@@ -1,7 +1,9 @@
-# .gitignore
+.gitignore
 
 config.py
 .env
 .ipynb
 /app
 update.py
+Pipfile
+Pipfile.lock

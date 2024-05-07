@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from serpapi import GoogleSearch
-import psycopg2
 import pydeck as pdk
 import geocoder
 import base64
