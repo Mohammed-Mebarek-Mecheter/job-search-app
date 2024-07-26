@@ -1,14 +1,38 @@
-.gitignore
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info
+.eggs
 
-config.py
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Streamlit
+.streamlit/
+
+# Environment variables
 .env
-.ipynb
-/app
-update.py
-.idea
 
-# Database connection
-conn = psycopg2.connect(database="job_db", user="postgres", password="", host="localhost")
-cursor = conn.cursor()
-Pipfile
-Pipfile.lock
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+job
